@@ -19,28 +19,23 @@ import java.util.List;
 //donner un noma la table
 @Table(name = "locataire")
 public class Locataire {
-/**
- * `loc_id` int(11) NOT NULL,
-  `loc_nom` varchar(55) NOT NULL,
-  `loc_prenom` varchar(55) NOT NULL,
-  `loc_email` varchar(128) NOT NULL,
-  `loc_tel` varchar(20) NOT NULL,
-  `loc_type` varchar(28) NOT NULL,
-  `loc_contact_denom` varchar(28) NOT NULL,
-  `loc_contact_numero` varchar(20) NOT NULL
- */
+
     @Id
     //auto generation de la clé primaire
     @GeneratedValue
-    private long idLivre;
+    private long loc_id;
 
-    private String ISBN;
-    private String titre;
-    private String auteur;
-    private String image;
-    private String description;
+    private String loc_nom;
+    private String loc_prenom;
+    private String loc_email;
+    private String loc_tel;
+    private String loc_type;
+    private String loc_contact_denom;
+    private String loc_contact_numero;
 
-    @OneToMany(mappedBy = "livre")
+
+
+    @OneToMany(mappedBy = "locataire")
     private List<LigneEmpruntAdherent> ligneEmpruntAdherentList;
 
     @ManyToOne

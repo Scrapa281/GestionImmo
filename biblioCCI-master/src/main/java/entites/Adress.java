@@ -18,8 +18,8 @@ import javax.persistence.Table;
 
 public class Adress  {
 
-    private String adresse;
-    private String ville;
-    private String codePostale;
-    private String pays;
+    private String adress_rue;
+    private String adress_ville;
+    private String adress_cd_pst;
+    private String adress_pays;
 }

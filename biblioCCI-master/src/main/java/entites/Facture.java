@@ -37,6 +37,6 @@ public class Facture {
     private double facture_mtn_ttc;
 
     
-    @OneToMany(mappedBy = "stock")
+    @OneToMany(mappedBy = "facture")
     List<Livre> livreList;
 }
